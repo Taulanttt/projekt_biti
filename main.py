@@ -18,7 +18,7 @@ def convert_upper(text):
 def count(text_list):
     return len(text_list)
 
-text=st.text_input('text:')
+text=st.text_input('Sheno tekstin: ')
 clist=convert_list(text)
 
 
