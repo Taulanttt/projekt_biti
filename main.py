@@ -3,36 +3,28 @@ import streamlit as st
 st.title('Projekti')
 
 
+def convert_list(texti):
+    lista=texti.split()
+    return lista
 
-stringu=st.text_input('Jepni tekstin')
+def convert_upper(text):
 
+    uppercaselist=[]
+    for i in text:
+        i=i.upper()
+        uppercaselist.append(i)
+    return uppercaselist
 
-def convert_list(a):
-    a=stringu.split()
-    if st.button('Return list'):
-        st.write(f"Result: {a}")
-    return a    
-print(convert_list(stringu))
+def count(text_list):
+    return len(text_list)
 
-
-# def convert_upper():
-    
-#     upper_words = []
-#     n=convert_list
-#     for word in n:
-#         upper_words.append(word.upper())
-#         return upper_words
-#     st.button('Return list')
-#     st.write(f"Result: {upper_words}")
-# print(convert_upper())
+text=st.text_input('text:')
+clist=convert_list(text)
 
 
-def count():
-    count=0
-    m=convert_list
-    for i in m:
-        count=+1
-    st.button('Return list')
-    st.write(f"Result: {count}")
-count()
-        
+if st.button('lista'):
+    st.write(convert_list(text))
+if st.button('upper'):
+    st.write(convert_upper(clist))
+if st.button('count'):
+    st.write(count(clist))
