@@ -22,9 +22,9 @@ text=st.text_input('Sheno tekstin: ')
 clist=convert_list(text)
 
 
-if st.button('lista'):
+if st.button('List'):
     st.write(convert_list(text))
-if st.button('upper'):
+if st.button('Upper-list'):
     st.write(convert_upper(clist))
-if st.button('count'):
+if st.button('Count'):
     st.write(count(clist))
